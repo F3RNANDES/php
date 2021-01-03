@@ -1,0 +1,12 @@
+<?php
+$nome = "iago nascimento";
+echo strtoupper($nome);
+echo "<br>";
+echo strtolower($nome);
+echo "<br>";
+echo $nome;
+echo ucwords($nome);
+echo "<br>";
+echo ucfirst($nome);
+
+?>
