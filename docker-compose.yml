@@ -1,17 +1,12 @@
-php:
-  build: .
-  ports:
-   - "80:80"
-   - "443:443"
-  volumes:
-   - ./:/var/www/html
-  links:
-   - db
+version: '3'
 
-db:
-  image: mysql:5.7
-  volumes:
-   - /var/lib/mysql
-  environment:
-   - MYSQL_ROOT_PASSWORD=myrootpass
-   - MYSQL_DATABASE=mydatabase
+services:
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - .:/var/www/html
